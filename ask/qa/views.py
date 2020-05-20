@@ -1,7 +1,5 @@
-from django.http import HttpResponse 
+from django.http import HttpResponse
+
+
 def test(request, *args, **kwargs):
-    return HttpResponse('OK')
-
-
-def question():
-    return None
+    return HttpResponse("OK %s" % kwargs["num"])
